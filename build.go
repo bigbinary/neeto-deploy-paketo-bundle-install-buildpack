@@ -82,6 +82,9 @@ func Build(
 
 		launch, build := entries.MergeLayerTypes("gems", context.Plan.Entries)
 
+		// Always include installed gem in the build layer
+		build = true
+
 		var layers []packit.Layer
 
 		if build {

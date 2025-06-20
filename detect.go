@@ -71,6 +71,13 @@ func Detect(gemfileParser, rubyVersionFileParser VersionParser, logger scribe.Em
 						Name: BundlerDependency,
 						Metadata: BuildPlanMetadata{
 							Build: true,
+							Launch:	true,
+						},
+					},
+					{
+						Name: GemsDependency,
+						Metadata: BuildPlanMetadata{
+							Launch: true,
 						},
 					},
 					{
@@ -79,6 +86,7 @@ func Detect(gemfileParser, rubyVersionFileParser VersionParser, logger scribe.Em
 							Version:       mriVersion,
 							VersionSource: versionSource,
 							Build:         true,
+							Launch:				 true,
 						},
 					},
 				},
